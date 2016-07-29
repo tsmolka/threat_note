@@ -8,43 +8,43 @@
 
       <div class="sidebar-wrapper">
         <div class="logo">
-          <a href="/" class="simple-text">
+          <a href="{{ url_for('home') }}" class="simple-text">
                     threat_note
                 </a>
         </div>
         <ul class="nav">
           <li>
-            <a href="/">
+            <a href="{{ url_for('home') }}">
               <i class="pe-7s-graph2"></i>
               <p>Dashboard</p>
             </a>
           </li>
           <li>
-            <a href="/networks">
+            <a href="{{ url_for('networks') }}">
               <i class="pe-7s-global"></i>
               <p>Network Indicators</p>
             </a>
           </li>
           <li>
-            <a href="/threatactors">
+            <a href="{{ url_for('threatactors') }}">
               <i class="pe-7s-users"></i>
               <p>Threat Actors</p>
             </a>
             <li>
-              <a href="/victims">
+              <a href="{{ url_for('victims') }}">
                 <i class="pe-7s-target"></i>
                 <p>Victims</p>
               </a>
             </li>
           </li>
           <li>
-            <a href="/files">
+            <a href="{{ url_for('files') }}">
               <i class="pe-7s-file"></i>
               <p>Files</p>
             </a>
           </li>
           <li>
-            <a href="/campaigns">
+            <a href="{{ url_for('campaigns') }}">
               <i class="pe-7s-shield"></i>
               <p>Campaigns</p>
             </a>
@@ -70,15 +70,15 @@
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="/profile" class="dropdown-toggle capitalize" data-toggle="dropdown">
+                <a href="{{ url_for('profile') }}" class="dropdown-toggle capitalize" data-toggle="dropdown">
                                     {{ current_user.user }}
                                     <b class="caret"></b>
                               </a>
                 <ul class="dropdown-menu">
-                  <li><a href="/profile">Edit Profile</a></li>
-                  <li><a href="/settings">Edit Settings</a></li>
+                  <li><a href="{{ url_for('profile') }}">Edit Profile</a></li>
+                  <li><a href="{{ url_for('settings') }}">Edit Settings</a></li>
                   <li class="divider"></li>
-                  <li><a href="/logout">Logout</a></li>
+                  <li><a href="{{ url_for('logout') }}">Logout</a></li>
                 </ul>
               </li>
             </ul>

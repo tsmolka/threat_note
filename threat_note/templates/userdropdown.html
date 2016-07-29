@@ -2,12 +2,12 @@
 <div class="collapse navbar-collapse">
   <ul class="nav navbar-nav navbar-right">
     <li class="dropdown">
-      <a href="/profile" class="dropdown-toggle capitalize" data-toggle="dropdown">{{ current_user.user }}<b class="caret"></b></a>
+      <a href="{{ url_for('profile') }}" class="dropdown-toggle capitalize" data-toggle="dropdown">{{ current_user.user }}<b class="caret"></b></a>
       <ul class="dropdown-menu">
-        <li><a href="/profile">Edit Profile</a></li>
-        <li><a href="/settings">Edit Settings</a></li>
+        <li><a href="{{ url_for('profile') }}">Edit Profile</a></li>
+        <li><a href="{{ url_for('settings') }}">Edit Settings</a></li>
         <li class="divider"></li>
-        <li><a href="/logout">Logout</a></li>
+        <li><a href="{{ url_for('logout') }}">Logout</a></li>
       </ul>
     </li>
   </ul>

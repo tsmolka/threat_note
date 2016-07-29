@@ -2,50 +2,50 @@
 
   <div class="sidebar-wrapper">
     <div class="logo">
-      <a href="/" class="simple-text">
+      <a href="{{ url_for('home') }}" class="simple-text">
                 threat_note
             </a>
     </div>
 
     <ul class="nav">
       <li>
-        <a href="/">
+        <a href="{{ url_for('home') }}">
           <i class="pe-7s-graph2"></i>
           <p>Dashboard</p>
         </a>
       </li>
       <li>
-        <a href="/networks">
+        <a href="{{ url_for('networks') }}">
           <i class="pe-7s-global"></i>
           <p>Network Indicators</p>
         </a>
       </li>
       <li>
-        <a href="/threatactors">
+        <a href="{{ url_for('threatactors') }}">
           <i class="pe-7s-users"></i>
           <p>Threat Actors</p>
         </a>
       </li>
       <li>
-        <a href="/victims">
+        <a href="{{ url_for('victims') }}">
           <i class="pe-7s-target"></i>
           <p>Victims</p>
         </a>
       </li>
       <li>
-        <a href="/files">
+        <a href="{{ url_for('files') }}">
           <i class="pe-7s-file"></i>
           <p>Files</p>
         </a>
       </li>
       <li>
-        <a href="/campaigns">
+        <a href="{{ url_for('campaigns') }}">
           <i class="pe-7s-shield"></i>
           <p>Campaigns</p>
         </a>
       </li>
         <li>
-        <a href="/tags">
+        <a href="{{ url_for('tags') }}">
           <i class="pe-7s-ticket"></i>
           <p>Tags</p>
         </a>

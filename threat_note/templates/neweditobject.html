@@ -35,7 +35,7 @@
                   <h4 class="title">Edit Indicator</h4>
                 </div>
                 <div class="content">
-                  <form action="/update/object/" enctype="application/x-www-form-urlencoded" method="POST">
+                  <form action="{{ url_for('updateobject') }}" enctype="application/x-www-form-urlencoded" method="POST">
                     <div class="row">
                       <div class="col-md-12">
 
@@ -217,8 +217,8 @@
 
                     <div style="float: right;">
                       {% if entry['type'] == "Threat Actor" %}
-                      <a href="/threatactors" class="btn btn-info btn-fill">Cancel</a> {% else %}
-                      <a href="/networks" class="btn btn-info btn-fill">Cancel</a> {% endif %}
+                      <a href="{{ url_for('threatactors') }}" class="btn btn-info btn-fill">Cancel</a> {% else %}
+                      <a href="{{ url_for('networks') }}" class="btn btn-info btn-fill">Cancel</a> {% endif %}
 
                       <button type="submit" class="btn btn-info btn-fill">Submit</button>
                       <button type="button" class="btn btn-success btn-fill" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> New Attribute</button>
@@ -247,7 +247,7 @@
       </div>
 
       <div class="modal-body">
-        <form class="form-horizontal" action="/insert/newfield/" enctype="application/x-www-form-urlencoded" method="POST">
+        <form class="form-horizontal" action="{{ url_for('insertnewfield') }}" enctype="application/x-www-form-urlencoded" method="POST">
           <fieldset>
 
             <div class="form-group">

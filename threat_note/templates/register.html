@@ -53,7 +53,7 @@
 	<form class="form-signin" action="{{ url_for('register') }}" method="POST">
 		{{ form.hidden_tag() }}
 		<h2 class="form-signin-heading">
-			<img src="/static/img/logo.png"> threat_note</h2>
+			<img src="{{ url_for('static', filename='img/logo.png') }}"> threat_note</h2>
 
 		<input id="user" class="form-control" name="user" type="text" value="" placeholder="Username">
 		<br>
